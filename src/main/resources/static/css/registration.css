@@ -3,3 +3,16 @@
 	font-size: 12px;
 	color: #FF1C19;
 }
+
+.form-horizontal {
+	max-width: 400px;
+	padding: 30px 38px 10px;
+	margin: 0 auto;
+	background-color: #eee;
+	border: 3px dotted rgba(0,0,0,0.1);
+}
+
+.form-horizontal-heading {
+	text-align:center;
+	margin-bottom: 60px;
+}

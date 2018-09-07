@@ -13,40 +13,26 @@
 <body>
 
 	<div class="container">
-		<img th:src="@{/images/login.jpg}" class="img-responsive center-block" width="300" height="300" alt="Logo" />
 		<form th:action="@{/login}" method="POST" class="form-signin">
-			<h3 class="form-signin-heading" th:text="Welcome"></h3>
+            <img th:src="@{/images/img-01.png}" class="img-responsive center-block" width="300" height="300" alt="Logo" />
 			<br/>
 			 
-			<input type="text" id="email" name="email"  th:placeholder="Email"
-				class="form-control" /> <br/> 
-			<input type="password"  th:placeholder="Password"
-				id="password" name="password" class="form-control" /> <br /> 
+			<input type="email" id="email" name="email"  th:placeholder="Email" class="form-control" /> <br/>
+			<input type="password"  th:placeholder="Password" id="password" name="password" class="form-control" /> <br />
 				
 			<div align="center" th:if="${param.error}">
 				<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
 		</form>
+
+            <div class="text-center p-t-136">
+						<a class="txt2" href="/registration">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+			</div>
 	</div>
 </p>
-
-
-
-	<div class="container">
-    		    <div class="row">
-            			<div class="col-md-6 col-md-offset-3">
-    		                <div class="form-group">
-                        	    <div class="col-sm-9">
-                        	        <form th:action="@{/registration}" method="get">
-                                        <button class="btn btn-warning btn-block" type="Submit">Registration</button>
-                                    </form>
-                        	    </div>
-                            </div>
-                        </div>
-                </div>
-    </div>
-
-
 </body>
 </html>

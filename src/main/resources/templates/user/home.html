@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	xmlns:th="http://www.thymeleaf.org">
 
 <head>
 <title>Admin Page</title>
@@ -13,7 +12,7 @@
 
 <body>
 
-<div>
+<div >
    <form th:action="@{/logout}" method="get">
                                <button class="btn btn-md btn-danger btn-lg glyphicon glyphicon-log-out" name="registration" type="Submit"
                                style="margin-left: 1200px; width: 200px;">  Logout</button>
@@ -33,14 +32,6 @@
 			</div>
 		</div>
 	</div>
-
-<section>
-  <nav>
-    <ul>
-      <li><a th:href="@{/userList}"> User List</a></li>
-    </ul>
-  </nav>
-</section>
 </body>
 
 </html>

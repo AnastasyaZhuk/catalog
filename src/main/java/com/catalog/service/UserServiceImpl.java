@@ -1,7 +1,8 @@
 package com.catalog.service;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 
 import com.catalog.model.User;
 import com.catalog.repository.RoleRepository;
@@ -31,8 +32,13 @@ public class UserServiceImpl implements UserService{
 	public void saveUser(User user) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		user.setActive(1);
-		Role userRole = roleRepository.findByRole("ADMIN");
-		user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
+		Role userRole = roleRepository.findByRole("USER");
+		user.setRoles(new HashSet<Role>(Collections.singletonList(userRole)));
 		userRepository.save(user);
+	}
+
+	@Override
+	public List<User> findAll() {
+		return userRepository.findAll();
 	}
 }
